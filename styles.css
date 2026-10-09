@@ -235,4 +235,51 @@
 .brand-mark {
   display: none;
 } 
+
+/* FIX: Keep the logo from taking over the page */
+.site-header .brand img {
+  display: block;
+  width: 46px !important;
+  height: 46px !important;
+  max-width: 46px;
+  object-fit: contain;
+  flex: 0 0 46px;
+}
+
+.footer .brand img {
+  display: block;
+  width: 46px !important;
+  height: 46px !important;
+  max-width: 46px;
+  object-fit: contain;
+  flex: 0 0 46px;
+}
+
+/* Keep the mobile header compact */
+@media (max-width: 620px) {
+  .site-header .nav-wrap {
+    min-height: 72px;
+  }
+
+  .site-header .brand {
+    max-width: calc(100% - 55px);
+    min-width: 0;
+  }
+
+  .site-header .brand-text {
+    min-width: 0;
+  }
+
+  .site-header .brand-text strong {
+    font-size: 12px;
+  }
+
+  .site-header .brand-text small {
+    font-size: 7px;
+  }
+
+  .site-header .menu-toggle {
+    flex-shrink: 0;
+  }
+}  
 }
