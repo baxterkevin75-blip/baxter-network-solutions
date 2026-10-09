@@ -269,3 +269,81 @@
     flex-shrink: 0;
   }
 }
+
+
+/* BNS homepage hero layout repair */
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+  align-items: center;
+  gap: 40px;
+  width: min(calc(100% - 48px), 1180px);
+  margin: 0 auto;
+}
+
+.hero-inner > * {
+  min-width: 0;
+}
+
+.hero-inner h1 {
+  font-size: clamp(42px, 5vw, 68px);
+  overflow-wrap: normal;
+}
+
+.hero-inner .lead {
+  max-width: 100%;
+  font-size: 16px;
+}
+
+.hero-inner .actions {
+  margin-top: 24px;
+}
+
+.hero-logo-orbit {
+  right: 2%;
+  width: min(32vw, 400px);
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  .hero-inner h1 {
+    max-width: 720px;
+  }
+
+  .hero-logo-orbit {
+    right: -10%;
+    width: 60vw;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-inner {
+    width: calc(100% - 32px);
+    gap: 20px;
+    padding-top: 65px;
+    padding-bottom: 45px;
+  }
+
+  .hero-inner h1 {
+    font-size: clamp(38px, 10vw, 48px);
+  }
+
+  .hero-inner .lead {
+    font-size: 15px;
+  }
+
+  .hero-logo-orbit {
+    top: 50%;
+    right: -25%;
+    width: 90vw;
+    opacity: 0.14;
+  }
+}
