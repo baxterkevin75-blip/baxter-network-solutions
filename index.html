@@ -1,9 +1,680 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="description" content="Network Engineering & IT Infrastructure | Baxter Network Solutions LLC"><meta name="theme-color" content="#11161c"><title>Network Engineering & IT Infrastructure | Baxter Network Solutions LLC</title><link rel="stylesheet" href="styles.css"></head><body><header class="site-header"><div class="container nav-wrap"><a class="brand" href="index.html"><span class="brand-mark">B</span><span class="brand-text"><strong>BAXTER</strong><small>NETWORK SOLUTIONS LLC</small></span></a><button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav"><a href="services.html">Services</a><a href="government.html">Government</a><a href="about.html">About</a><a href="contact.html">Contact</a><a class="nav-cta" href="contact.html">Request a Quote</a></nav></div></header>
-<section class="hero"><div class="container hero-inner"><div class="reveal"><p class="eyebrow"><span></span> NETWORK ENGINEERING • IT INFRASTRUCTURE</p><h1>Reliable technology.<br><em>Practical solutions.</em></h1><p class="lead">Baxter Network Solutions LLC delivers hands-on network engineering, infrastructure support, troubleshooting, monitoring, documentation, and technical field services.</p><div class="actions"><a class="btn btn-primary" href="contact.html">Request a Quote →</a><a class="btn btn-outline" href="services.html">Explore Services</a></div></div></div></section>
-<section class="section"><div class="container"><div class="section-head reveal"><div><p class="eyebrow"><span></span> CORE CAPABILITIES</p><h2>Technical support built<br><em>around the work.</em></h2></div><p>Practical support for organizations that depend on reliable networks, infrastructure, and responsive technical service.</p></div><div class="cards">
-<article class="card reveal"><div class="icon">⌁</div><h3>Network Engineering</h3><p>Design, implementation, configuration, troubleshooting, and optimization across network environments.</p><a href="services.html#network">Learn more →</a></article>
-<article class="card reveal"><div class="icon">▦</div><h3>Infrastructure Support</h3><p>Hands-on support for network equipment, infrastructure, connectivity, and technology deployments.</p><a href="services.html#infrastructure">Learn more →</a></article>
-<article class="card reveal"><div class="icon">⌘</div><h3>Technical Support</h3><p>Practical assistance for hardware, software, connectivity, users, and operational technology needs.</p><a href="services.html#support">Learn more →</a></article></div></div></section>
-<section class="section dark"><div class="container split"><div class="reveal"><p class="eyebrow"><span></span> GOVERNMENT CONTRACTING</p><h2>Ready to support<br><em>the mission.</em></h2><p class="muted" style="margin:22px 0 28px">Baxter Network Solutions LLC is positioned to support government agencies, prime contractors, teaming partners, and commercial organizations with network and technical requirements.</p><a class="btn btn-primary" href="government.html">Government Capabilities →</a></div><div class="panel reveal"><div class="panel-head"><span>BUSINESS PROFILE</span><span class="badge"><i></i> ACTIVE</span></div><div class="panel-row"><span>SAM.gov</span><strong>Active Registration</strong></div><div class="panel-row"><span>NAICS</span><strong>541512</strong></div><div class="panel-row"><span>NAICS</span><strong>811210</strong></div><div class="panel-row"><span>Business Type</span><strong>Small Business</strong></div></div></div></section>
-<section class="section contact"><div class="container contact-grid"><div class="reveal"><p class="eyebrow"><span></span> LET'S CONNECT</p><h2>Have a technical<br><em>need?</em></h2><p class="muted" style="margin-top:20px">Tell us what you need and we can discuss the requirement, scope, and support approach.</p></div><div class="contact-card reveal"><a class="contact-item" href="mailto:kevin.baxter@baxternetworksolutions.com"><span class="contact-icon">@</span><span><small>EMAIL</small><strong>kevin.baxter@baxternetworksolutions.com</strong></span></a><a class="contact-item" href="tel:+12542453141"><span class="contact-icon">☎</span><span><small>PHONE</small><strong>254-245-3141</strong></span></a><a class="btn btn-primary full" href="contact.html">Request a Quote →</a></div></div></section>
-<footer class="footer"><div class="container footer-top"><div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark">B</span><span class="brand-text"><strong>BAXTER</strong><small>NETWORK SOLUTIONS LLC</small></span></a><p>Network Engineering • IT Infrastructure • Technical Support</p></div><div class="footer-links"><a href="services.html">Services</a><a href="government.html">Government</a><a href="about.html">About</a><a href="contact.html">Contact</a></div></div><div class="container footer-bottom"><span>© <span id="year"></span> Baxter Network Solutions LLC. All rights reserved.</span><span>Reliable Technology. Practical Solutions.</span></div></footer><script src="script.js"></script></body></html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Baxter Network Solutions LLC | Network Engineering & IT Services</title>
+  <meta name="description" content="Baxter Network Solutions LLC provides network engineering, IT infrastructure support, troubleshooting, equipment maintenance, and technical services for commercial and government contracting opportunities.">
+  <meta name="theme-color" content="#172331">
+
+  <link rel="canonical" href="https://baxternetworksolutions.com/">
+  <link rel="icon" href="Logo.jpg">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    :root {
+      --navy: #172331;
+      --navy-deep: #101923;
+      --blue: #2469a8;
+      --blue-light: #eaf3fb;
+      --silver: #c7d0d9;
+      --ink: #202a35;
+      --muted: #657180;
+      --white: #fff;
+      --surface: #f4f6f8;
+      --line: #dce2e8;
+      --radius: 14px;
+      --shadow: 0 14px 38px rgba(18, 36, 54, .09);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 95px; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--white);
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible {
+      outline: 3px solid #69a9ed;
+      outline-offset: 4px;
+    }
+    img { max-width: 100%; }
+    .container { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,.97);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+    .nav-wrap {
+      min-height: 84px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+    .brand { display: flex; align-items: center; text-decoration: none; min-width: 0; }
+    .brand img { width: 64px; height: 64px; object-fit: contain; margin-right: 13px; }
+    .brand-text { display: grid; line-height: 1.2; }
+    .brand-text strong { font-size: 17px; letter-spacing: 1.6px; color: var(--navy); }
+    .brand-text small { margin-top: 5px; font-size: 10px; letter-spacing: 1.8px; color: var(--muted); }
+    .nav { display: flex; align-items: center; gap: 25px; }
+    .nav a { font-size: 14px; font-weight: 650; text-decoration: none; }
+    .nav a:hover { color: var(--blue); }
+    .nav .nav-cta {
+      padding: 11px 17px;
+      color: var(--white);
+      background: var(--blue);
+      border-radius: 7px;
+    }
+    .nav .nav-cta:hover { background: var(--navy); color: white; }
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: white;
+      color: var(--navy);
+      padding: 9px 12px;
+      font-size: 21px;
+      cursor: pointer;
+    }
+
+    .hero {
+      overflow: hidden;
+      position: relative;
+      color: white;
+      background:
+        radial-gradient(ellipse at 85% 25%, rgba(61,131,192,.27), transparent 37%),
+        linear-gradient(120deg, var(--navy-deep), var(--navy) 68%, #263f55);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 450px;
+      height: 450px;
+      right: -180px;
+      bottom: -280px;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 50%;
+      box-shadow: 0 0 0 40px rgba(255,255,255,.025),
+                  0 0 0 80px rgba(255,255,255,.025);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      padding-block: 100px 94px;
+      max-width: 1160px;
+    }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 22px;
+      color: #a9c9e8;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 27px; height: 2px; background: #75b1ed; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 850px;
+      margin-bottom: 23px;
+      font-size: clamp(39px, 6vw, 70px);
+      line-height: 1.07;
+      letter-spacing: -2px;
+    }
+    h1 em, h2 em { color: #9dc7ed; font-style: normal; }
+    .hero .lead {
+      max-width: 700px;
+      margin-bottom: 30px;
+      color: #d6e0e9;
+      font-size: clamp(17px, 2vw, 20px);
+    }
+    .actions { display: flex; flex-wrap: wrap; gap: 13px; }
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 12px 19px;
+      border: 1px solid transparent;
+      border-radius: 7px;
+      font-size: 14px;
+      font-weight: 750;
+      text-align: center;
+      text-decoration: none;
+      transition: transform .2s, background .2s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { color: white; background: var(--blue); }
+    .btn-primary:hover { background: #1d578d; }
+    .btn-light { color: var(--navy); background: white; }
+    .btn-outline { color: white; border-color: rgba(255,255,255,.45); }
+    .btn-outline:hover { background: rgba(255,255,255,.1); }
+    .hero-note { margin: 24px 0 0; color: #b7c7d6; font-size: 12px; }
+
+    .trust-strip { border-bottom: 1px solid var(--line); background: #f7f9fb; }
+    .trust-grid { display: grid; grid-template-columns: repeat(3,1fr); }
+    .trust-item { padding: 23px 25px; border-right: 1px solid var(--line); }
+    .trust-item:first-child { padding-left: 0; }
+    .trust-item:last-child { border-right: 0; }
+    .trust-item strong { display: block; color: var(--navy); font-size: 14px; }
+    .trust-item span { color: var(--muted); font-size: 12px; }
+
+    .section { padding-block: 84px; }
+    .section-alt { background: var(--surface); }
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 35px;
+      margin-bottom: 38px;
+    }
+    .section-head > div { max-width: 650px; }
+    .section-head > p { max-width: 420px; margin-bottom: 6px; color: var(--muted); }
+    h2 {
+      margin-bottom: 0;
+      color: var(--navy);
+      font-size: clamp(30px, 4vw, 45px);
+      line-height: 1.16;
+      letter-spacing: -1px;
+    }
+    h2 em { color: var(--blue); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .card {
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: white;
+      box-shadow: 0 5px 18px rgba(20,40,60,.025);
+      transition: transform .2s, box-shadow .2s;
+    }
+    .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .card-icon {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 21px;
+      border-radius: 10px;
+      color: var(--blue);
+      background: var(--blue-light);
+      font-size: 23px;
+      font-weight: 800;
+    }
+    .card h3 { margin-bottom: 10px; color: var(--navy); font-size: 19px; }
+    .card p { margin-bottom: 17px; color: var(--muted); font-size: 14px; }
+    .text-link { color: var(--blue); font-size: 14px; font-weight: 750; text-decoration: none; }
+    .text-link:hover { text-decoration: underline; }
+
+    .government { color: white; background: var(--navy); }
+    .government-grid { display: grid; grid-template-columns: 1fr .85fr; gap: 65px; align-items: center; }
+    .government h2 { color: white; }
+    .government .eyebrow { margin-bottom: 18px; }
+    .government-copy { margin: 22px 0 28px; color: #d0dae4; }
+    .government-list { display: grid; gap: 12px; padding: 0; margin: 25px 0 0; list-style: none; }
+    .government-list li { display: flex; gap: 11px; color: #e3eaf0; font-size: 14px; }
+    .government-list li::before { content: "✓"; color: #8dc4f4; font-weight: 900; }
+    .profile {
+      padding: 28px;
+      border: 1px solid rgba(255,255,255,.17);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.055);
+    }
+    .profile-title {
+      margin-bottom: 16px;
+      padding-bottom: 17px;
+      border-bottom: 1px solid rgba(255,255,255,.16);
+      color: #9dc7ed;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.6px;
+    }
+    .profile-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      font-size: 13px;
+    }
+    .profile-row:last-child { border: 0; }
+    .profile-row span { color: #c3d0dc; }
+    .profile-row strong { text-align: right; color: white; }
+    .profile-note { margin: 15px 0 0; color: #b6c5d3; font-size: 11px; }
+
+    .approach-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 25px; }
+    .approach-item { padding-top: 20px; border-top: 2px solid var(--silver); }
+    .approach-number { color: var(--blue); font-size: 12px; font-weight: 850; letter-spacing: 1.5px; }
+    .approach-item h3 { margin: 10px 0; color: var(--navy); font-size: 19px; }
+    .approach-item p { margin-bottom: 0; color: var(--muted); font-size: 14px; }
+
+    .cta-band { padding-block: 55px; color: white; background: #eaf1f7; }
+    .cta-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 28px;
+      padding: 36px;
+      border-radius: var(--radius);
+      color: white;
+      background: linear-gradient(110deg, #1a2a3b, #254c70);
+    }
+    .cta-inner h2 { color: white; font-size: clamp(26px, 3vw, 35px); }
+    .cta-inner p { margin: 10px 0 0; color: #d4e0eb; }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    .footer { color: #d2dce5; background: var(--navy-deep); }
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 40px;
+      padding-block: 43px;
+    }
+    .footer .brand-text strong { color: white; }
+    .footer .brand-text small { color: #b5c4d1; }
+    .footer .brand img { background: white; border-radius: 5px; }
+    .footer-brand p { margin: 17px 0 0; color: #aebdca; font-size: 13px; }
+    .footer-links { display: flex; flex-wrap: wrap; align-content: start; gap: 16px 23px; }
+    .footer-links a { color: #d2dce5; font-size: 13px; text-decoration: none; }
+    .footer-links a:hover { color: white; }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-block: 19px;
+      border-top: 1px solid rgba(255,255,255,.12);
+      color: #aebdca;
+      font-size: 12px;
+    }
+
+    @media (max-width: 850px) {
+      .menu-toggle { display: block; }
+      .nav {
+        display: none;
+        position: absolute;
+        top: 83px;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        border-bottom: 1px solid var(--line);
+        background: white;
+        box-shadow: var(--shadow);
+      }
+      .nav.open { display: grid; gap: 0; }
+      .nav a { padding: 12px 8px; }
+      .nav .nav-cta { text-align: center; margin-top: 8px; }
+      .section-head { display: block; }
+      .section-head > p { margin-top: 18px; }
+      .government-grid { grid-template-columns: 1fr; gap: 35px; }
+      .cards { grid-template-columns: repeat(2,1fr); }
+      .trust-item { padding-inline: 15px; }
+      .trust-item:first-child { padding-left: 0; }
+      .cta-inner { align-items: flex-start; flex-direction: column; }
+    }
+    @media (max-width: 560px) {
+      .container { width: min(100% - 30px, 1160px); }
+      .nav-wrap { min-height: 75px; }
+      .brand img { width: 48px; height: 48px; margin-right: 9px; }
+      .brand-text strong { font-size: 14px; letter-spacing: 1px; }
+      .brand-text small { font-size: 8px; letter-spacing: 1px; }
+      .nav { top: 74px; }
+      .hero-inner { padding-block: 70px; }
+      h1 { letter-spacing: -1px; }
+      .section { padding-block: 60px; }
+      .cards, .approach-grid, .trust-grid { grid-template-columns: 1fr; }
+      .trust-item, .trust-item:first-child {
+        padding: 15px 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+      .trust-item:last-child { border-bottom: 0; }
+      .card { padding: 23px; }
+      .profile { padding: 21px; }
+      .profile-row { gap: 12px; }
+      .cta-inner { padding: 25px; }
+      .footer-top, .footer-bottom { flex-direction: column; }
+      .footer-top { gap: 25px; }
+      .footer-bottom { gap: 7px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Baxter Network Solutions home">
+        <img src="Logo.jpg" alt="Baxter Network Solutions LLC logo">
+        <span class="brand-text">
+          <strong>BAXTER</strong>
+          <small>NETWORK SOLUTIONS LLC</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button"
+        aria-label="Open navigation" aria-expanded="false"
+        aria-controls="primary-nav">☰</button>
+
+      <nav class="nav" id="primary-nav" aria-label="Main navigation">
+        <a href="services.html">Services</a>
+        <a href="government.html">Government</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="contact.html">Request Information →</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Network Engineering · IT Infrastructure</p>
+        <h1>Reliable technology.<br><em>Practical solutions.</em></h1>
+        <p class="lead">
+          Baxter Network Solutions LLC provides hands-on network and IT
+          infrastructure support focused on connectivity, troubleshooting,
+          equipment maintenance, technical documentation, and dependable
+          service delivery.
+        </p>
+        <div class="actions">
+          <a class="btn btn-primary" href="contact.html">Discuss Your Requirements →</a>
+          <a class="btn btn-outline" href="services.html">Explore Our Services</a>
+        </div>
+        <p class="hero-note">
+          Supporting commercial customers, government contracting teams,
+          and prime contractor partnerships.
+        </p>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Business focus">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <strong>Network & Infrastructure</strong>
+          <span>Connectivity, equipment, and technical operations</span>
+        </div>
+        <div class="trust-item">
+          <strong>Hands-On Technical Support</strong>
+          <span>Troubleshooting, maintenance, and documentation</span>
+        </div>
+        <div class="trust-item">
+          <strong>Government Contracting</strong>
+          <span>Subcontracting and teaming opportunities</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="capabilities">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Core Capabilities</p>
+            <h2>Technical support built<br><em>around the work.</em></h2>
+          </div>
+          <p>
+            Practical technology services to help organizations maintain
+            reliable systems, resolve technical issues, and support daily
+            operations.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">⌁</div>
+            <h3>Network Engineering</h3>
+            <p>
+              Network configuration, connectivity troubleshooting,
+              infrastructure support, and network documentation.
+            </p>
+            <a class="text-link" href="services.html#network">Explore network services →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">▦</div>
+            <h3>Infrastructure Support</h3>
+            <p>
+              Support for network equipment, hardware deployments,
+              physical connectivity, and infrastructure maintenance.
+            </p>
+            <a class="text-link" href="services.html#infrastructure">Explore infrastructure support →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">⌘</div>
+            <h3>IT & Technical Support</h3>
+            <p>
+              Practical technical assistance, equipment diagnostics,
+              issue resolution, and support for business technology.
+            </p>
+            <a class="text-link" href="services.html#support">Explore technical support →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">↗</div>
+            <h3>Monitoring & Troubleshooting</h3>
+            <p>
+              Help identify connectivity problems, investigate service
+              interruptions, and document findings and corrective actions.
+            </p>
+            <a class="text-link" href="services.html">View all services →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">▤</div>
+            <h3>Maintenance & Documentation</h3>
+            <p>
+              Equipment maintenance support, technical records,
+              configuration documentation, and organized service reporting.
+            </p>
+            <a class="text-link" href="services.html">View service details →</a>
+          </article>
+
+          <article class="card">
+            <div class="card-icon" aria-hidden="true">◎</div>
+            <h3>Field & On-Site Services</h3>
+            <p>
+              Technical field support for installations, equipment
+              checks, troubleshooting, and infrastructure-related tasks,
+              subject to project requirements.
+            </p>
+            <a class="text-link" href="contact.html">Discuss a requirement →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section government" id="government">
+      <div class="container government-grid">
+        <div>
+          <p class="eyebrow">Government Contracting</p>
+          <h2>Ready to support<br><em>the mission.</em></h2>
+          <p class="government-copy">
+            Baxter Network Solutions LLC is pursuing opportunities to
+            support government agencies, prime contractors, and teaming
+            partners with network engineering, IT infrastructure, equipment
+            support, and related technical requirements.
+          </p>
+          <a class="btn btn-primary" href="government.html">Government Capabilities →</a>
+
+          <ul class="government-list">
+            <li>Subcontracting and teaming opportunities</li>
+            <li>Network and IT infrastructure support</li>
+            <li>Maintenance, troubleshooting, and documentation</li>
+            <li>Responsive communication and clear service records</li>
+          </ul>
+        </div>
+
+        <aside class="profile" aria-label="Business profile">
+          <div class="profile-title">COMPANY PROFILE</div>
+          <div class="profile-row">
+            <span>Legal Name</span>
+            <strong>Baxter Network Solutions LLC</strong>
+          </div>
+          <div class="profile-row">
+            <span>SAM.gov</span>
+            <strong>Active Registration</strong>
+          </div>
+          <div class="profile-row">
+            <span>CAGE</span>
+            <strong>Registered</strong>
+          </div>
+          <div class="profile-row">
+            <span>NAICS</span>
+            <strong>541512</strong>
+          </div>
+          <div class="profile-row">
+            <span>NAICS</span>
+            <strong>811210</strong>
+          </div>
+          <div class="profile-row">
+            <span>Business Focus</span>
+            <strong>Network & IT Services</strong>
+          </div>
+          <p class="profile-note">
+            NAICS 541512: Computer Systems Design Services.
+            NAICS 811210: Electronic and Precision Equipment Repair
+            and Maintenance. Confirm contract-specific eligibility and scope
+            before submitting an offer.
+          </p>
+          <p class="profile-note">
+            SAM registration and CAGE status are presented as supplied by
+            the company; verify current details in official federal records.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">How We Work</p>
+            <h2>Clear communication.<br><em>Practical execution.</em></h2>
+          </div>
+          <p>
+            A straightforward approach to technical requirements, service
+            coordination, and project support.
+          </p>
+        </div>
+
+        <div class="approach-grid">
+          <article class="approach-item">
+            <span class="approach-number">01 / UNDERSTAND</span>
+            <h3>Define the requirement</h3>
+            <p>
+              Understand the technical need, environment, scope, timeline,
+              and expectations before work begins.
+            </p>
+          </article>
+          <article class="approach-item">
+            <span class="approach-number">02 / SUPPORT</span>
+            <h3>Deliver practical service</h3>
+            <p>
+              Coordinate technical support around the agreed scope,
+              applicable procedures, and project requirements.
+            </p>
+          </article>
+          <article class="approach-item">
+            <span class="approach-number">03 / DOCUMENT</span>
+            <h3>Record the work</h3>
+            <p>
+              Communicate findings, document completed tasks, and provide
+              clear updates appropriate to the engagement.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-inner">
+          <div>
+            <p class="eyebrow">Start a Conversation</p>
+            <h2>Have a project or technical requirement?</h2>
+            <p>Let's discuss the scope, timeline, and support you need.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-light" href="contact.html">Contact Baxter</a>
+            <a class="btn btn-outline"
+              href="mailto:kevin.baxter@baxternetworksolutions.com?subject=Baxter%20Network%20Solutions%20Inquiry">
+              Email Us →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <img src="Logo.jpg" alt="" aria-hidden="true">
+          <span class="brand-text">
+            <strong>BAXTER</strong>
+            <small>NETWORK SOLUTIONS LLC</small>
+          </span>
+        </a>
+        <p>Network Engineering · IT Infrastructure · Technical Support</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="services.html">Services</a>
+        <a href="government.html">Government Contracting</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="https://sam.gov/" target="_blank" rel="noopener noreferrer">SAM.gov ↗</a>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Baxter Network Solutions LLC. All rights reserved.</span>
+      <span>Reliable Technology. Practical Solutions.</span>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector("#primary-nav");
+
+    if (menuButton && navigation) {
+      menuButton.addEventListener("click", () => {
+        const isOpen = navigation.classList.toggle("open");
+        menuButton.setAttribute("aria-expanded", String(isOpen));
+        menuButton.setAttribute(
+          "aria-label",
+          isOpen ? "Close navigation" : "Open navigation"
+        );
+        menuButton.textContent = isOpen ? "✕" : "☰";
+      });
+
+      navigation.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          navigation.classList.remove("open");
+          menuButton.setAttribute("aria-expanded", "false");
+          menuButton.setAttribute("aria-label", "Open navigation");
+          menuButton.textContent = "☰";
+        });
+      });
+    }
+
+    document.querySelector("#year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
