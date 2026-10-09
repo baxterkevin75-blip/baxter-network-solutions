@@ -676,6 +676,28 @@
     }
 
     document.querySelector("#year").textContent = new Date().getFullYear();
+    
+/* Restore scroll-reveal animations */
+const revealItems = document.querySelectorAll(
+  ".trust-item, .section-head, .card, .government-grid, .approach-item, .cta-inner"
+);
+
+revealItems.forEach((item) => item.classList.add("reveal"));
+
+if ("IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealItems.forEach((item) => revealObserver.observe(item));
+} else {
+  revealItems.forEach((item) => item.classList.add("visible"));
+}
   </script>
 </body>
 </html>
