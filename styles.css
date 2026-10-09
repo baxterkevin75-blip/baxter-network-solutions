@@ -14,3 +14,58 @@
 .reveal{opacity:0;transform:translateY(20px);transition:.7s}.reveal.visible{opacity:1;transform:none}
 @media(max-width:900px){.nav{display:none;position:absolute;top:78px;left:14px;right:14px;background:#11161c;padding:18px;border:1px solid rgba(255,255,255,.1);border-radius:12px;flex-direction:column;align-items:stretch}.nav.open{display:flex}.nav a{padding:9px}.nav-cta{text-align:center}.menu-toggle{display:block}.section-head,.split,.contact-grid{grid-template-columns:1fr;gap:35px}.cards{grid-template-columns:repeat(2,1fr)}.hero-inner{min-height:560px}}
 @media(max-width:620px){.container{width:min(calc(100% - 28px),var(--max))}.hero h1,.page-title h1{font-size:44px}.cards{grid-template-columns:1fr}.check-list,.form-grid{grid-template-columns:1fr}.field.full-field{grid-column:auto}.footer-top,.footer-bottom{flex-direction:column;align-items:flex-start;justify-content:center;padding:25px 0}.footer-links{flex-wrap:wrap}.section{padding:78px 0}}
+
+/* Mobile hero layout repair — preserve existing animations */
+@media (max-width: 620px) {
+  .hero {
+    overflow: hidden;
+  }
+
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 28px;
+    min-height: auto;
+    padding-top: 110px;
+    padding-bottom: 60px;
+  }
+
+  .hero-inner > * {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(38px, 10vw, 48px);
+    overflow-wrap: anywhere;
+  }
+
+  .hero .lead {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .hero .eyebrow {
+    max-width: 100%;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    overflow-wrap: anywhere;
+  }
+
+  .hero .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .hero .actions .btn {
+    max-width: 100%;
+  }
+}
